@@ -2,6 +2,13 @@ import progressbar
 import pdb
 import numpy as np
 import matplotlib.pyplot as plt
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+install("progressbar")
 
 means = np.arange(-200, 200, 0.01)
 
